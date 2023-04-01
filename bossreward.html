@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RendogHelper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <span style="color: coral;">Ren</span><span style="color: aqua;">dog</span>Helper
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">기능모음</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../index.html">메인</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="rdmoney.html">강화석 계산기</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bossreward.html">전리품 계산기</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="battlestat.html">전투력 측정기</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <br><br><br>
+      <h1 style="text-align: center;">반갑다 이곳은 보스계산 페이지이다.</h1>
+      <br><br>
+      <li style="text-align: center;">가격은 유저거래 기준입니다.</li>
+      <p style="text-align: center;">
+        <img src="img/boss/boss1.png" alt="error">
+        라바 슬라임 전리품: <input type="number" id="mb1">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/boss/boss2.png" alt="error">
+        기간틱 스켈레톤 전리품: <input type="number" id="mb2">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/boss/boss3.png" alt="error">
+        사스콰치 전리품: <input type="number" id="mb3">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/boss/boss4.png" alt="error">
+        파멸의 골렘 전리품: <input type="number" id="mb4">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/boss/boss5.png" alt="error">
+        스피드이더 전리품: <input type="number" id="mb5">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/boss/boss6.png" alt="error">
+        엘더 가디언 전리품: <input type="number" id="mb6">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/boss/boss7.png" alt="error">
+        스테들러 전리품: <input type="number" id="mb7">개
+      </p>
+      <div style="text-align: center;" >
+        <button onclick="calculate1()">계산하기</button>
+      </div><br><br>
+      <p id="resultbs" style="text-align: center;"></p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss1.png" alt="error">
+        가디언 락토 전리품: <input type="number" id="mnb1">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss2.png" alt="error">
+        바드 스켈레톤 전리품: <input type="number" id="mnb2">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss3.png" alt="error">
+        스노우 예티 전리품: <input type="number" id="mnb3">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss4.png" alt="error">
+        겁쟁이 선장 전리품: <input type="number" id="mnb4">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss5.png" alt="error">
+        레클루즈 거미 전리품: <input type="number" id="mnb5">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss6.png" alt="error">
+        오징오징 대마왕 전리품: <input type="number" id="mnb6">개
+      </p>
+      <p style="text-align: center;">
+        <img src="img/miniboss/miniboss7.png" alt="error">
+        피레이세 전리품: <input type="number" id="mnb7">개
+      </p>
+      <div style="text-align: center;" >
+        <button onclick="calculate2()">계산하기</button>
+      </div><br><br>
+      <p id="resultmnbs" style="text-align: center;"></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RendogHelper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <span style="color: coral;">Ren</span><span style="color: aqua;">dog</span>Helper
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">기능모음</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../index.html">메인</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="rdmoney.html">강화석 계산기</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bossreward.html">전리품 계산기</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="battlestat.html">전투력 측정기</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <br><br><br>
+    <h1 style="text-align: center;">반갑다 이곳은 전투력 측정 페이지이다.</h1>
+    <br><br>
+    <h1 style="text-align: center; color: lightslategrey ;">전투력 측정</h1><br>
+    <h3 style="text-align: center;"><span style="color: darkviolet;">전직무기</span>는 평가에서 <span style="color: red;">제외입니다.</span></h3><br>
+    <h3 style="text-align: center;">또한 모든 무기는 <span style="color: yellow;">MAX</span> 강화 기준입니다.</h3>
+    <h3 style="text-align: center;">단, <span style="color: indigo;">초월</span>은 <span style="color: yellow;">MAX</span>와 다른 취급.</h3>
+    <div style="text-align: center;">
+        <hr><li>점수 기준 안내</li><br>
+        <ul>
+            <p>데미지는 100 = 100점 입니다. <br>
+            <b>100 이하의 데미지는 무조건 반올림</b> <br>
+            점수는 좌 + 우클릭 데미지 합산 <br>
+            브이미르의 경우 우클릭시 1타로 시작해서 끝날때 기준. <br><br>
+            무적 , 절대은신 보유시 + 2500점 <br><br>
+            저주 , 데미지증폭 , 흡혈 , 풀피회복 보유시 + 1500점 <br><br>
+            버프(저항 , 신속 , 베리어 등) , 디버프(위치변환 , 구속 , 끌어당김) , 플라이 보유시 + 500점 <br><br>
+            회복(풀피회복 X) 보유시 + 500점 <br><br>
+            초월된 무기일 경우 + 500점<br><br>
+            슈메티드만 추가로 + 300점<br><br>
+            추가로 위 사항에 3가지 이상 해당될 경우 + 300점<br>
+            단, 초월무기 점수는 해당 X</p>
+        </ul><hr>
+    </div>
+    <div style="text-align: center;">
+        <li>무기 순서 안내</li>
+        <ul>
+            <p>무기의 정렬 순서는 다음과 같습니다. <br>
+            <span style="color: blueviolet;">Epic</span> -> <span style="color: aqua;">Unique</span> -> <span style="color: crimson;">Legend</span> -> <span style="color:darkorange;">Superior</span> -> <b><span style="color: black;">Special</span>
+            </p><hr>
+    </div><br>
+        <form style="text-align: center;">
+            <input type="checkbox" id="Cball" value="0"> 
+            <label for="Cball">체크박스 모두 체크</label>
+        </form><br><hr>
+    <div style="text-align: center;">
+        <form><h2 style="color: blueviolet;">Epic</h2><br><br>
+            <label for="checkbox1">
+                <input type="checkbox" id="checkbox1" value="2500"> 
+                <img src="epic/1.png" alt="error">
+                가디언
+            </label>
+            <label for="checkbox2">
+                <input type="checkbox" id="checkbox2" value="500"> 
+                <img src="epic/2.png" alt="error">
+                비숍
+            </label>
+            <label for="checkbox3">
+                <input type="checkbox" id="checkbox3" value="500"> 
+                <img src="epic/3.png" alt="error">
+                블랙홀
+            </label>
+            <label for="checkbox4">
+                <input type="checkbox" id="checkbox4" value="300"> 
+                <img src="epic/4.png" alt="error">
+                슈메티드
+            </label><br><br><br>
+            <label for="checkbox5">
+                <input type="checkbox" id="checkbox5" value="1000"> 
+                <img src="epic/5.png" alt="error">
+                아르마
+            </label>
+            <label for="checkbox6">
+                <input type="checkbox" id="checkbox6" value="500"> 
+                <img src="epic/6.png" alt="error">
+                익스플로젼
+            </label>
+            <label for="checkbox7">
+                <input type="checkbox" id="checkbox7" value="1000"> 
+                <img src="epic/7.png" alt="error">
+                하포럼
+            </label>
+            <label for="checkbox8">
+                <input type="checkbox" id="checkbox8" value="1500"> 
+                <img src="epic/8.png" alt="error">
+                리스크
+            </label><br><br><br>
+            <label for="checkbox9">
+                <input type="checkbox" id="checkbox9" value="1000"> 
+                <img src="epic/9.png" alt="error">
+                프런처
+            </label>
+            <label for="checkbox10">
+                <input type="checkbox" id="checkbox10" value="1000"> 
+                <img src="epic/10.png" alt="error">
+                워터폴
+            </label>
+            <label for="checkbox11">
+                <input type="checkbox" id="checkbox11" value="1500"> 
+                <img src="epic/11.png" alt="error">
+                에놉시스
+            </label> <br><hr>
+            <h2><span style="color: indigo;">초월</span> <span  style="color: blueviolet;">Epic</span></h2>
+            <br><br>
+            <label for="choe_checkbox1">
+                <input type="checkbox" id="choe_checkbox1" value="2800"> 
+                <img src="epic/epic 2/1.png" alt="error">
+                초월 가디언
+            </label>
+            <label for="choe_checkbox2">
+                <input type="checkbox" id="choe_checkbox2" value="2500"> 
+                <img src="epic/epic 2/2.png" alt="error">
+                초월 리스크
+            </label>
+            <label for="choe_checkbox3">
+                <input type="checkbox" id="choe_checkbox3" value="3300"> 
+                <img src="epic/epic 2/3.png" alt="error">
+                초월 블랙홀
+            </label>
+            <label for="choe_checkbox4">
+                <input type="checkbox" id="choe_checkbox4" value="1000"> 
+                <img src="epic/epic 2/4.png" alt="error">
+                초월 비숍
+            </label><br><br><br>
+            <label for="choe_checkbox5">
+                <input type="checkbox" id="choe_checkbox5" value="800"> 
+                <img src="epic/epic 2/5.png" alt="error">
+                초월 슈메티드
+            </label>
+            <label for="choe_checkbox6">
+                <input type="checkbox" id="choe_checkbox6" value="2000"> 
+                <img src="epic/epic 2/6.png" alt="error">
+                초월 에놉시스
+            </label>
+            <label for="choe_checkbox7">
+                <input type="checkbox" id="choe_checkbox7" value="1500"> 
+                <img src="epic/epic 2/7.png" alt="error">
+                초월 워터폴
+            </label>
+            <label for="choe_checkbox8">
+                <input type="checkbox" id="choe_checkbox8" value="2500">
+                <img src="epic/epic 2/8.png" alt="error">
+                초월 익스플로젼
+            </label><br><br><br>
+            <label for="choe_checkbox9">
+                <input type="checkbox" id="choe_checkbox9" value="3300"> 
+                <img src="epic/epic 2/9.png" alt="error">
+                초월 아르마
+            </label>
+            <label for="choe_checkbox10">
+                <input type="checkbox" id="choe_checkbox10" value="4500"> 
+                <img src="epic/epic 2/10.png" alt="error">
+                초월 하포럼
+            </label>
+            <label for="choe_checkbox11">
+                <input type="checkbox" id="choe_checkbox11" value="5000"> 
+                <img src="epic/epic 2/11.png" alt="error">
+                초월 프런처
+            </label>  <br><hr>
+            <h2><span style="color: aqua;">Unique</span></h2><br>
+            <label for="u_checkbox1">
+                <input type="checkbox" id="u_checkbox1" value="1700"> 
+                <img src="unique/1.png" alt="error">
+                라이오닉
+            </label>
+            <label for="u_checkbox2">
+                <input type="checkbox" id="u_checkbox2" value="2000"> 
+                <img src="unique/2.png" alt="error">
+                볼케이노
+            </label>
+            <label for="u_checkbox3">
+                <input type="checkbox" id="u_checkbox3" value="1700"> 
+                <img src="unique/3.png" alt="error">
+                스타블래스터
+            </label>
+            <label for="u_checkbox4">
+                <input type="checkbox" id="u_checkbox4" value="1800"> 
+                <img src="unique/4.png" alt="error">
+                트리플스타
+            </label><br><br>
+            <label for="u_checkbox5">
+                <input type="checkbox" id="u_checkbox5" value="1500"> 
+                <img src="unique/5.png" alt="error">
+                헤비스매셔
+            </label>
+            <label for="u_checkbox6">
+                <input type="checkbox" id="u_checkbox6" value="4200"> 
+                <img src="unique/6.png" alt="error">
+                매직콜리젼
+            </label>
+            <label for="u_checkbox7">
+                <input type="checkbox" id="u_checkbox7" value="1300"> 
+                <img src="unique/7.png" alt="error">
+                데스페라도
+            </label>
+            <label for="u_checkbox8">
+                <input type="checkbox" id="u_checkbox8" value="3500"> 
+                <img src="unique/8.png" alt="error">
+                셀프익스팅션
+            </label><br><br>
+            <label for="u_checkbox9">
+                <input type="checkbox" id="u_checkbox9" value="2000"> 
+                <img src="unique/9.png" alt="error">
+                트랩
+            </label>
+            <label for="u_checkbox10">
+                <input type="checkbox" id="u_checkbox10" value="2200"> 
+                <img src="unique/10.png" alt="error">
+                스타런쳐
+            </label>
+            <label for="u_checkbox11">
+                <input type="checkbox" id="u_checkbox11" value="2000"> 
+                <img src="unique/11.png" alt="error">
+                메테오
+            </label>
+            <label for="u_checkbox12">
+                <input type="checkbox" id="u_checkbox12" value="700"> 
+                <img src="unique/12.png" alt="error">
+                프로미넌트
+            </label>
+            <label for="u_checkbox13">
+                <input type="checkbox" id="u_checkbox13" value="2200"> 
+                <img src="unique/13.png" alt="error">
+                사령소환
+            </label><br><br>
+            <label for="u_checkbox14">
+                <input type="checkbox" id="u_checkbox14" value="2300"> 
+                <img src="unique/14.png" alt="error">
+                스톰크러셔
+            </label>
+            <label for="u_checkbox15">
+                <input type="checkbox" id="u_checkbox15" value="1400"> 
+                <img src="unique/15.png" alt="error">
+                네크로해머
+            </label>
+            <label for="u_checkbox16">
+                <input type="checkbox" id="u_checkbox16" value="3600"> 
+                <img src="unique/16.png" alt="error">
+                마그네트
+            </label>
+            <label for="u_checkbox17">
+                <input type="checkbox" id="u_checkbox17" value="1400"> 
+                <img src="unique/20.png" alt="error">
+                에반리스트
+            </label><br><br><hr>
+            <h2><span style="color: indigo;">초월</span> <span  style="color: aqua;">Unique</span></h2><br>
+            <label for="chou_checkbox1">
+                <input type="checkbox" id="chou_checkbox1" value="10500"> 
+                <img src="unique/unique2/1.png" alt="error">
+                초월 셀프익스팅션
+            </label>
+            <label for="chou_checkbox2">
+                <input type="checkbox" id="chou_checkbox2" value="5500"> 
+                <img src="unique/unique2/2.png" alt="error">
+                초월 사령소환
+            </label>
+            <label for="chou_checkbox3">
+                <input type="checkbox" id="chou_checkbox3" value="10500"> 
+                <img src="unique/unique2/3.png" alt="error">
+                초월 볼케이노
+            </label>
+            <label for="chou_checkbox4">
+                <input type="checkbox" id="chou_checkbox4" value="6000"> 
+                <img src="unique/unique2/4.png" alt="error">
+                초월 매직콜리젼
+            </label><br><br>
+            <label for="chou_checkbox5">
+                <input type="checkbox" id="chou_checkbox5" value="7200"> 
+                <img src="unique/unique2/5.png" alt="error">
+                초월 마그네트
+            </label>
+            <label for="chou_checkbox6">
+                <input type="checkbox" id="chou_checkbox6" value="4100"> 
+                <img src="unique/unique2/6.png" alt="error">
+                초월 메테오
+            </label>
+            <label for="chou_checkbox7">
+                <input type="checkbox" id="chou_checkbox7" value="4200"> 
+                <img src="unique/unique2/7.png" alt="error">
+                초월 라이오닉
+            </label>
+            <label for="chou_checkbox8">
+                <input type="checkbox" id="chou_checkbox8" value="6500"> 
+                <img src="unique/unique2/17.png" alt="error">
+                초월 스타런쳐
+            </label><br><br>
+            <label for="chou_checkbox9">
+                <input type="checkbox" id="chou_checkbox9" value="6700"> <!-- 입력 함 -->
+                <img src="unique/unique2/9.png" alt="error">
+                초월 네크로해머
+            </label>
+            <label for="chou_checkbox10">
+                <input type="checkbox" id="chou_checkbox10" value="4200"> 
+                <img src="unique/unique2/10.png" alt="error">
+                초월 데스페라도
+            </label>
+            <label for="chou_checkbox11">
+                <input type="checkbox" id="chou_checkbox11" value="3700"> 
+                <img src="unique/unique2/11.png" alt="error">
+                초월 헤비스매셔
+            </label>
+            <label for="chou_checkbox12">
+                <input type="checkbox" id="chou_checkbox12" value="1900"> 
+                <img src="unique/unique2/12.png" alt="error">
+                초월 프로미넌트
+            </label>
+            <label for="chou_checkbox13">
+                <input type="checkbox" id="chou_checkbox13" value="3500"> 
+                <img src="unique/unique2/13.png" alt="error">
+                초월 트리플스타
+            </label><br><br>
+            <label for="chou_checkbox14">
+                <input type="checkbox" id="chou_checkbox14" value="4700"> 
+                <img src="unique/unique2/14.png" alt="error">
+                초월 에반리스트
+            </label>
+            <label for="chou_checkbox15">
+                <input type="checkbox" id="chou_checkbox15" value="5000"> 
+                <img src="unique/unique2/15.png" alt="error">
+                초월 스톰크러셔
+            </label>
+            <label for="chou_checkbox16">
+                <input type="checkbox" id="chou_checkbox16" value="3700"> 
+                <img src="unique/unique2/16.png" alt="error">
+                초월 스타블래스터
+            </label>
+            <label for="chou_checkbox18">
+                <input type="checkbox" id="chou_checkbox18" value="3500"> 
+                <img src="unique/unique2/18.png" alt="error">
+                초월 트랩
+            </label><br><br><hr>
+            <h2><span  style="color: crimson;">Legend</span></h2><br>
+            <label for="lgd_checkbox1">
+                <input type="checkbox" id="lgd_checkbox1" value="3700"> 
+                <img src="legend/1.png" alt="error">
+                흡혈귀
+            </label>
+            <label for="lgd_checkbox2">
+                <input type="checkbox" id="lgd_checkbox2" value="3700"> 
+                <img src="legend/2.png" alt="error">
+                세크리트
+            </label>
+            <label for="lgd_checkbox3">
+                <input type="checkbox" id="lgd_checkbox3" value="6500"> 
+                <img src="legend/3.png" alt="error">
+                브이미르
+            </label>
+            <label for="lgd_checkbox4">
+                <input type="checkbox" id="lgd_checkbox4" value="5900"> 
+                <img src="legend/4.png" alt="error">
+                블레이드 브랜디쉬
+            </label><br><br>
+            <label for="lgd_checkbox5">
+                <input type="checkbox" id="lgd_checkbox5" value="5500"> 
+                <img src="legend/5.png" alt="error">
+                문라이트
+            </label>
+            <label for="lgd_checkbox6">
+                <input type="checkbox" id="lgd_checkbox6" value="6200"> 
+                <img src="legend/6.png" alt="error">
+                다크로즈
+            </label>
+            <label for="lgd_checkbox7">
+                <input type="checkbox" id="lgd_checkbox7" value="3900"> 
+                <img src="legend/7.png" alt="error">
+                흑월참
+            </label>
+            <label for="lgd_checkbox8">
+                <input type="checkbox" id="lgd_checkbox8" value="3300"> 
+                <img src="legend/8.png" alt="error">
+                하데스
+            </label>
+            <label for="lgd_checkbox9">
+                <input type="checkbox" id="lgd_checkbox9" value="8300"> 
+                <img src="legend/9.png" alt="error">
+                혈계심판
+            </label><br><hr><br>
+            <h2><span style="color: indigo;">초월</span><span  style="color: crimson;">Legend</span></h2><br>
+            <label for="cholgd_checkbox1">
+                <input type="checkbox" id="cholgd_checkbox1" value="7900"> 
+                <img src="legend/legend2/1.png" alt="error">
+                초월 흡혈귀
+            </label>
+            <label for="cholgd_checkbox2">
+                <input type="checkbox" id="cholgd_checkbox2" value="5500"> 
+                <img src="legend/legend2/2.png" alt="error">
+                초월 흑월참
+            </label>
+            <label for="cholgd_checkbox3">
+                <input type="checkbox" id="cholgd_checkbox3" value="5400"> 
+                <img src="legend/legend2/3.png" alt="error">
+                초월 하데스
+            </label>
+            <label for="cholgd_checkbox4">
+                <input type="checkbox" id="cholgd_checkbox4" value="15800"> 
+                <img src="legend/legend2/4.png" alt="error">
+                초월 혈계심판
+            </label><br><br>
+            <label for="cholgd_checkbox5">
+                <input type="checkbox" id="cholgd_checkbox5" value="6300"> 
+                <img src="legend/legend2/5.png" alt="error">
+                초월 세크리트
+            </label>
+            <label for="cholgd_checkbox6">
+                <input type="checkbox" id="cholgd_checkbox6" value="7800"> 
+                <img src="legend/legend2/6.png" alt="error">
+                초월 블레이드 브랜디쉬
+            </label>
+            <label for="cholgd_checkbox7">
+                <input type="checkbox" id="cholgd_checkbox7" value="7400"> 
+                <img src="legend/legend2/7.png" alt="error">
+                초월 문라이트
+            </label>
+            <label for="cholgd_checkbox8">
+                <input type="checkbox" id="cholgd_checkbox8" value="13000"> 
+                <img src="legend/legend2/8.png" alt="error">
+                초월 브이미르
+            </label>
+            <label for="cholgd_checkbox9">
+                <input type="checkbox" id="cholgd_checkbox9" value="8200"> 
+                <img src="legend/legend2/9.png" alt="error">
+                초월 다크로즈
+            </label><br><br><hr>
+            <h2><span  style="color: darkorange;">Superior</span></h2><br>
+            <label for="sp_checkbox1">
+                <input type="checkbox" id="sp_checkbox1" value="9900"> 
+                <img src="supe/1.png" alt="error">
+                디바우어
+            </label>
+            <label for="sp_checkbox2">
+                <input type="checkbox" id="sp_checkbox2" value="5200"> 
+                <img src="supe/2.png" alt="error">
+                잔월효성
+            </label>
+            <label for="sp_checkbox3">
+                <input type="checkbox" id="sp_checkbox3" value="9800"> 
+                <img src="supe/3.png" alt="error">
+                타라시스
+            </label>
+            <label for="sp_checkbox4">
+                <input type="checkbox" id="sp_checkbox4" value="9000"> 
+                <img src="supe/4.png" alt="error">
+                레이네드
+            </label><br><br><hr>
+            <h2><span style="color: indigo;">초월</span><span  style="color: darkorange;">Superior</span></h2><br>
+            <label for="chosp_checkbox1">
+                <input type="checkbox" id="chosp_checkbox1" value="12200"> 
+                <img src="supe/supe2/1.png" alt="error">
+                초월 디바우어
+            </label>
+            <label for="chosp_checkbox2">
+                <input type="checkbox" id="chosp_checkbox2" value="8000"> 
+                <img src="supe/supe2/2.png" alt="error">
+                초월 잔월효성
+            </label>
+            <label for="chosp_checkbox3">
+                <input type="checkbox" id="chosp_checkbox3" value="14900"> 
+                <img src="supe/supe2/3.png" alt="error">
+                초월 레이네드
+            </label>
+            <label for="chosp_checkbox4">
+                <input type="checkbox" id="chosp_checkbox4" value="14000"> 
+                <img src="supe/supe2/4.png" alt="error">
+                초월 타라시스
+            </label><br><br><hr>
+            <h2><span  style="color:darkorchid;">Special</span></h2><br>
+            <label for="spc_checkbox1">
+                <input type="checkbox" id="spc_checkbox1" value="4700"> 
+                <img src="weapon/1.png" alt="...">
+                달타냥
+            </label>
+            <label for="spc_checkbox2">
+                <input type="checkbox" id="spc_checkbox2" value="3000"> 
+                <img src="special/2.png" alt="...">
+                각성 엔비스
+            </label>
+            <label for="spc_checkbox3">
+                <input type="checkbox" id="spc_checkbox3" value="2000"> 
+                <img src="special/4.png" alt="...">
+                일라세아
+            </label>
+            <label for="spc_checkbox4">
+                <input type="checkbox" id="spc_checkbox4" value="1500"> 
+                <img src="special/4.png" alt="...">
+                일라세아 파이
+            </label><br><br>
+            <label for="spc_checkbox5">
+                <input type="checkbox" id="spc_checkbox5" value="3500"> 
+                <img src="special/16.png" alt="...">
+                완드 오브 크리스트
+            </label>
+            <label for="spc_checkbox6">
+                <input type="checkbox" id="spc_checkbox6" value="6000"> 
+                <img src="special/10.png" alt="...">
+                렌독 퍼스트 소드
+            </label>
+            <label for="spc_checkbox7">
+                <input type="checkbox" id="spc_checkbox7" value="2200"> 
+                <img src="special/13.png" alt="...">
+                앤쵸비 퍼스트 소드
+            </label>
+            <label for="spc_checkbox8">
+                <input type="checkbox" id="spc_checkbox8" value="4700"> 
+                <img src="special/16.png" alt="...">
+                애니버서리 배틀 엑스
+            </label><br><br>
+            <label for="spc_checkbox9">
+                <input type="checkbox" id="spc_checkbox9" value="2700"> 
+                <img src="special/17.png" alt="...">
+                크리스마스 캐롤 악보
+            </label>
+            <label for="spc_checkbox10">
+                <input type="checkbox" id="spc_checkbox10" value="9500"> 
+                <img src="special/19.png" alt="...">
+                초월 트리플스타 스페셜
+            </label><br><br><hr>
+            <br><br>
+            <button type="button" class="btn btn-dark" onclick="resultcbst()">전투력 측정하기</button>
+        </form>
+    </div><br><hr><br><br>
+    <h1 id="resultcbst" style="text-align: center;"></h1>
+    <br><br><hr>
+    <script src="index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>RendogHelper</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">
+                <span style="color: coral;">Ren</span><span style="color: aqua;">dog</span>Helper
+            </a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">기능모음</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="../index.html">메인</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="rdmoney.html">강화석 계산기</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="bossreward.html">전리품 계산기</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="battlestat.html">전투력 측정기</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <br><br><br>
+    <h1 style="text-align: center;">반갑다 이곳은 강화석 계산 페이지이다.</h1>
+    <br><br>
+    <h1 style="text-align: center;">강화석 교환기</h1>
+    <form style="text-align: center;">
+        <label for="stoneTier1">
+          <img src="img/1.png" alt="error">
+          1강 강화석 개수:
+        </label>
+        <input id = "stoneTier1" name="stoneTier1" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier2">
+          <img src="img/2.png" alt="error">
+          2강 강화석 개수:
+        </label>
+        <input id = "stoneTier2" name="stoneTier2" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier3">
+          <img src="img/3.png" alt="error">
+          3강 강화석 개수:
+        </label>
+        <input id = "stoneTier3" name="stoneTier3" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier4">
+          <img src="img/4.png" alt="error">
+          4강 강화석 개수:
+        </label>
+        <input id = "stoneTier4" name="stoneTier4" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier5">
+          <img src="img/5.png" alt="error">
+          5강 강화석 개수:
+        </label>
+        <input id = "stoneTier5" name="stoneTier5" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier6">
+          <img src="img/6.png" alt="error">
+          6강 강화석 개수:
+        </label>
+        <input id = "stoneTier6" name="stoneTier6" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier7">
+          <img src="img/7.png" alt="error">
+          7강 강화석 개수:
+        </label>
+        <input id = "stoneTier7" name="stoneTier7" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier8">
+          <img src="img/8.png" alt="error">
+          8강 강화석 개수:
+        </label>
+        <input id = "stoneTier8" name="stoneTier8" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier9">
+          <img src="img/9.png" alt="error">
+          9강 강화석 개수:
+        </label>
+        <input id = "stoneTier9" name="stoneTier9" type="text" placeholder="개수를 입력하던지."><br>
+        <label for="stoneTier10">
+          <img src="img/10.png" alt="error">
+          10강 강화석 개수:
+        </label>
+        <input id = "stoneTier10" name="stoneTier10" type="text" placeholder="개수를 입력하던지."><br>
+        <button type="button" onclick="calculate()">계산하기</button>
+    </form>
+    <br>
+    <p id="result" style="text-align: center;"></p>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
